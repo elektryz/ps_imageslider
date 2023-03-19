@@ -36,8 +36,10 @@
 							{if isset($fields[0]['form']['images']) && $input.name == "image"}
 							<img src="{$image_baseurl}{$fields[0]['form']['images'][$language.id_lang]}" class="img-thumbnail" />
 							{/if}
-							{if isset($fields[0]['form']['images_mobile']) && $input.name == "image_mobile" && {$fields[0]['form']['images_mobile'][$language.id_lang]}}
-								<img src="{$image_baseurl}{$fields[0]['form']['images_mobile'][$language.id_lang]}" class="img-thumbnail" />
+							{if isset($fields[0]['form']['images_mobile']) && $input.name == "image_mobile"}
+								{if $fields[0]['form']['images_mobile'][$language.id_lang]}
+									<img src="{$image_baseurl}{$fields[0]['form']['images_mobile'][$language.id_lang]}" class="img-thumbnail" />
+								{/if}
 							{/if}
 							<div class="dummyfile input-group">
 								<input id="{$input.name}_{$language.id_lang}" type="file" name="{$input.name}_{$language.id_lang}" class="hide-file-upload" />
