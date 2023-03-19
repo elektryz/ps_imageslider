@@ -36,7 +36,7 @@
 							{if isset($fields[0]['form']['images']) && $input.name == "image"}
 							<img src="{$image_baseurl}{$fields[0]['form']['images'][$language.id_lang]}" class="img-thumbnail" />
 							{/if}
-							{if isset($fields[0]['form']['images_mobile']) && $input.name == "image_mobile"}
+							{if isset($fields[0]['form']['images_mobile']) && $input.name == "image_mobile" && {$fields[0]['form']['images_mobile'][$language.id_lang]}}
 								<img src="{$image_baseurl}{$fields[0]['form']['images_mobile'][$language.id_lang]}" class="img-thumbnail" />
 							{/if}
 							<div class="dummyfile input-group">
